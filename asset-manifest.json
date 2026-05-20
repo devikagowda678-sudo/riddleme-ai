@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/riddlemaster-ai/static/css/main.e6c13ad2.css",
+    "main.js": "/riddlemaster-ai/static/js/main.05a04154.js",
+    "static/js/453.f5edffe1.chunk.js": "/riddlemaster-ai/static/js/453.f5edffe1.chunk.js",
+    "index.html": "/riddlemaster-ai/index.html",
+    "main.e6c13ad2.css.map": "/riddlemaster-ai/static/css/main.e6c13ad2.css.map",
+    "main.05a04154.js.map": "/riddlemaster-ai/static/js/main.05a04154.js.map",
+    "453.f5edffe1.chunk.js.map": "/riddlemaster-ai/static/js/453.f5edffe1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.05a04154.js"
+  ]
+}
