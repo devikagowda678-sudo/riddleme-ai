@@ -1,4 +1,4 @@
-name: Deploy static content to Pages
+name: Deploy React app to GitHub Pages
 
 on:
   push:
@@ -15,38 +15,31 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       
-      # 1. Install Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # 2. Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # 3. Build the React project
       - name: Build
         run: npm run build
 
-      # 4. Point to the build output
       - name: Setup Pages
         uses: actions/configure-pages@v5
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This assumes your build output is in a folder named 'build'
-          # If it's 'dist', change this to path: './dist'
+          # This points to the folder created after 'npm run build'
+          # Check your project folder; it is usually 'build' or 'dist'
           path: './build' 
       
       - name: Deploy to GitHub Pages
